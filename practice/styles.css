@@ -1,0 +1,157 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+
+}
+
+.home{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.555),black),url(./images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.logo img{
+    width: 50%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3em;
+    height: 70px;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li a{
+    margin: 0 40px;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 17px;
+    position: relative;
+    padding-bottom: 5px;
+}
+nav ul li a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: aliceblue;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: .4s ease;
+}
+nav ul li a:hover::after{
+    transform: scaleX(1);
+
+}
+.fa-bars{
+    color: aliceblue;
+    font-size: 30px;
+    position: absolute;
+    right: 1em;
+    visibility: hidden;
+}
+ .fa-xmark {
+    color: aliceblue;
+    font-size: 30px;
+    position: absolute;
+    left: 1em;
+    top: .5em;
+    visibility: hidden;
+
+}
+
+
+@media (max-width:900px){
+    .home{
+        position: relative;
+    }
+   
+     nav ul{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        width: 60%;
+        bottom: 0;
+        right: 0;
+        align-items: center;
+        height: 100vh;
+        padding-top: 60px;
+        transform: scaleX(0);
+        transition: .3s step-end;
+        
+       
+    }
+    nav ul.menu{
+        transform: scaleX(1);
+    }
+    nav ul li{
+
+        padding-bottom: 80px;
+        text-transform: uppercase;
+    }
+    .fa-xmark{
+        visibility: visible;
+    }
+    .fa-bars{
+        visibility: visible;
+    }
+   
+}
+
+@media (max-width:500px){
+    nav ul{
+        width: 100%;
+    }
+}
+.heading{
+    color: aliceblue;
+    transition: 1s;
+}
+.heading:hover{
+    color: aqua;
+}
+
+
+/* csss for section two */
+
+.two{
+    width: 100%;
+    min-height: 200vh;
+    background-color: aliceblue;
+    overflow: scroll;
+}
+
+.container{
+    width: 366px;
+    background-color: aqua;
+}
+
+.imgcont{
+    width: 100%;
+    
+}
+.image{
+    width: 70px;
+    height: 70px;
+    background-position: center;
+    background-size: cover;
+    
+  
+}
+.image img{
+    width: 100%;
+    border-radius: 50%;
+
+}
+
+/* fixed position */
+

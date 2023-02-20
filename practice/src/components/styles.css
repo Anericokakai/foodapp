@@ -1,0 +1,459 @@
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Comfortaa:wght@300;600&family=Montserrat:ital,wght@0,300;0,400;0,600;1,300;1,400;1,500;1,600&family=Nova+Mono&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Roboto:ital,wght@0,300;0,400;0,700;1,100&family=Saira:ital,wght@0,300;0,500;0,600;0,700;0,800;1,100;1,500;1,700;1,800&family=Sofia+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Titillium+Web:ital,wght@0,400;0,600;0,700;1,300;1,400;1,600&display=swap');
+
+:root {
+  --black: #000000;
+  --yellow: #ffc040;
+  --grey: #808080;
+  --white: #f8f8f7;
+  --white2:#f8f8f7;
+  --purewhite: #ffff;
+  --font-family1: "Gilroy";
+  --font-family2: "Amatic SC", cursive;
+  --font-family3: "Comfortaa", cursive;
+  --font-family4: "Montserrat", sans-serif;
+  --font-family5: "Poppins", sans-serif;
+  --font-family6: "Roboto", sans-serif;
+  --font-family7: "Saira", sans-serif;
+  --font-family8: "Sofia Sans", sans-serif;
+  --font-family9: "Titillium Web", sans-serif;
+  --font-family10: 'Nova Mono', monospace;
+  --greyboxshadow:6px 6px 10px -1px rgba(0,0,0,0.1),-6px -6px 10px -1px rgba(255,255,255,0.7);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.navlinks{
+    color: var(--black);
+}
+#navigation {
+  width: 250px;
+  background-color: var(--white);
+  min-height: 100vh;
+  padding: 1em;
+  position: absolute;
+
+  
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--yellow);
+  font-family: var(--font-family6);
+  padding-bottom: 1em;
+}
+.logo img {
+  width: 20%;
+  border-radius: 5px;
+}
+.singlenav {
+  display: flex;
+text-align: left;
+  align-items: center;
+  
+  width: 150px;
+  margin: 0.3em;
+  padding: .7em 0.5em;
+  border-radius: 20px;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.singlenav:hover {
+  background-color: var(--yellow);
+}
+.ul {
+  background-color: var(--purewhite);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+}
+.singlenav i {
+  margin-right: 0.5em;
+  padding-left: .3em;
+}
+
+/* /////////////////////////////////////// */
+.clentcard {
+  background-color: var(--purewhite);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
+  border-radius: 20px;
+  padding: 1em;
+}
+
+.profile {
+  width: 60px;
+  height: 60px;
+}
+.profile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.profilebtn {
+  border: none;
+  padding: 0.5em 2em;
+  margin-top: 0.4em;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: var(--yellow);
+  color: var(--purewhite);
+}
+.fa-bars {
+  color: var(--yellow);
+  margin-left: .5em;
+  width: 30px;
+  height: 30px;
+  font-size: 19px;
+  padding-top: 7px;
+  padding-left: 7px;
+  border-radius: 50%;
+  visibility: collapse;
+  position: absolute;
+  top: .5em;
+  background-color: var(--white);
+ 
+}
+.xmarkcontainer{
+    visibility: hidden;
+}
+@media (max-width: 800px) {
+  .singlenav {
+    padding: 0.5em;
+  }
+  #navigation {
+    transform: scaleX(0);
+    transition: .3s ease-in;
+    box-shadow: var(--greyboxshadow);
+    position: fixed;
+  }
+  .fa-bars {
+    visibility: visible;
+    cursor: pointer;
+    position: fixed;
+  }
+  .menu#navigation{
+    transform: scaleX(1);
+  }
+
+  .xmarkcontainer{
+    visibility: visible;
+    position: absolute;
+    right: -3%;
+    top: 40%;
+    width: 3px;
+    height: 150px;
+    background-color: var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    color: var(--purewhite);
+    font-size: 19px;
+    cursor: pointer;
+  }
+}
+
+
+/* ///////////////////////////////////////// */
+
+/* food container */
+
+
+.foodcontainer{
+    padding-top: 3em;
+    background-color: var(--white);
+    height: 100vh;
+}
+.navsection{
+   
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+    align-items: center;
+}
+.navsection input{
+    border-radius: 100vw;
+    border: none;
+    padding: .5em 2em;
+    background-color: var(--purewhite);
+}
+.navsection input:focus{
+    outline: 1px solid grey;
+}
+.navsection button{
+    background-color: var(--purewhite);
+    border: none;
+    padding: 5px;
+    border-radius: 50%;
+    margin-left: 1em;
+
+}
+.navsection button i{
+    font-size: 1.4em;
+}
+
+@media (max-width:500px) {
+    .navsection{
+        padding:  0 1em;
+    }
+    .navsection input{
+        padding:.5em 1em ;
+        width: 150px;
+    }
+    .navsection h1{
+        font-size: 20px;
+    }
+    .navsection button i{
+        font-size: 1em;
+    }
+    .navsection button{
+        margin-left: .4em;
+    }
+
+}
+@media (max-width:300px){
+    .navsection input{
+        width: 100px;
+
+    }
+}
+
+
+
+@media (min-width:800px) {
+    .foodcontainer{
+    margin-left: 250px;
+
+    }
+    
+}
+/* ///////////////////////////////////////// */
+
+/* food container cards */
+.foodinnercont{
+  width: 100%;
+  margin-top: 2em;
+  min-height: 100vh;
+  background-color: var(--white);
+  display: flex;
+  flex-wrap: wrap;
+  
+  justify-content: center;
+
+
+}
+.foodcard{
+  width: 200px;
+  background-color: var(--purewhite);
+  height: 250px;
+  text-align: center;
+  border-radius: 20px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.foodimage{
+  width: 100%;
+  height: 40%;
+  margin-bottom: 2.5em;
+
+}
+.foodimage img{
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.foodcard h2{
+  color: var(--yellow);
+}
+@media (max-width:800px) {
+  
+  .foodinnercont{
+    padding-left: 2em;
+  }
+}
+@media (max-width:463px) {
+  .foodcard{
+    width: 100px;
+    height: 150px;
+    margin-bottom: 1em;
+  }
+  .foodcard h3{
+    font-size: 12px;
+    
+  }
+  .foodimage{
+    height: 20%;
+  }
+  .foodcard p{
+    margin-top: .3em;
+    font-size: 12px;
+  }
+  .foodcard h2{
+    font-size: 13px;
+    margin-top: .5em;
+  }
+}
+
+
+
+/* ..////////////////////////////////////////////////// */
+/* home page  */
+
+.home{
+  background:linear-gradient(rgba(0, 0, 0, 0.201),#000000c8,#ff7500), url(../Images/homebg.jpg);
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home h1{
+  font-size: 47px;
+  color: var(--yellow);
+}
+.desgner1{
+  color: var(--yellow);
+  font-family: var(--font-family10);
+}
+.homeinfo h5{
+  text-align: center;
+  color: var(--purewhite);
+  padding-bottom: 1em;
+  font-family: var(--font-family2);
+  font-size: 30px;
+
+}
+.homeinfo h4{
+  text-align: center;
+  padding-bottom: .5em;
+  font-family: var(--font-family10);
+  color: var(--yellow);
+}
+.homeinfo h6{
+  color: var(--purewhite);
+  font-size: 16px;
+  font-family: var(--font-family2);
+  text-align: center;
+}
+
+.designer2{
+  text-transform: uppercase;
+  color: var(--purewhite);
+  font-family: var(--font-family10);
+}
+@media (min-width:800px) {
+  .home h1{
+    font-size: 70px;
+  }
+  .homeinfo h5{
+    font-size: 30px;
+
+  }
+  .homeinfo{
+    padding-left: 5em;
+  }
+  .homeinfo h6{
+    font-size: 23px;
+  }
+
+  
+}
+
+/* /////////////////////////////////////////////// */
+/* menu style */
+.foodcontainer2{
+  padding-top: 2em;
+}
+.menu2{
+  font-size: 25px;
+  text-transform: uppercase;
+  font-family: var(--font-family10);
+}
+/* /////////////////////////////////////////////// */
+/* offers page design */
+
+.offersmain{
+  width: 100%;
+  min-height: 60vh;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.689),#ff7700ab,#ff7700d2,#ff7700ba,rgba(0, 0, 0, 0.623)),url(../Images/secondbg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.offerscontainer{
+  background: none;
+  min-height: 60vh;
+}
+.offersmenu{
+  padding-top: 1em;
+  color: var(--purewhite);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form{
+  background-color: aqua;
+  height: 70vh;
+  display: flex;
+align-items:center;
+justify-content: center;
+flex-direction: column;
+
+}
+input{
+  padding: .5em;
+}
